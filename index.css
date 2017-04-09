@@ -2,10 +2,15 @@
   font-family: 'Lato', sans-serif;
 }
 
+body {
+  width: 80%;
+  margin-left: 10%;
+}
+
 p {
   text-indent: 25px;
   text-align: justify;
-  font-size: .9em;
+  font-size: 1em;
 }
 
 p:first-child {
@@ -14,6 +19,22 @@ p:first-child {
 
 .lighter {
   font-weight: lighter;
+}
+
+.cover .firstlogo {
+  height: 180px;
+  margin-top: 4%;
+  margin-left: 4%;
+}
+
+.spacing {
+  display: inline-block;
+  padding-top: 5%;
+  margin-left: 20%;
+}
+
+.downarrow {
+  display: none;
 }
 
 .descriptionbox {
@@ -147,6 +168,23 @@ div.divFooter, div.divHeader {
   vertical-align: top;
 }
 
+.sumpage h3, .assessments h3, .closing-page h3 {
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;  
+  margin-bottom: 1em;
+}
+
+.sumpage h3:before, .assessments h3:before, .closing-page h3:before {
+  content: "";
+  position: absolute;
+  width: 5em;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #06CE59;
+}
+
 .summary {
   position: relative;
 }
@@ -169,22 +207,86 @@ div.divFooter, div.divHeader {
   margin: 1em;
 }
 
+.closing-page .logo {
+  width: 100%;
+  background-color: white;
+  height: 150px;
+  text-align: center;
+  margin-left: -.5cm;
+  margin-right: -.5cm;
+}
+
+.closing-page .logo img {
+  height: 90px;
+  margin-top: 5%;
+}
+
+.closing-page p {
+  text-indent: 0;
+  font-weight: lighter;
+  font-weight: 1em;
+}
+
+.contact {
+  height: 200px;
+  text-align: center;
+}
+
+.contact-info {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  position: relative;
+}
+
+.contact-info h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: lighter;
+  margin-left: 1em;
+  white-space: pre;
+}
+
+.contact-info h4:first-child {
+  margin-top: 2em;
+}
+
+.contact img {
+  height: 120px;
+}
+
+.contact-info:before {
+  content: '';
+  position: absolute;
+  height: 105%;
+  top: 40%;
+  left: 0;
+  width: 2px;
+  border-left: 1px solid #06CE59;
+}
+
 
 @media print {
-  /* insert your style declarations here */
   * {
-    color: black;
     -webkit-print-color-adjust: exact;
   }
 
-  .cover .firstlogo {
-    height: 180px;
-    margin-top: 4%;
-    margin-left: 4%;
+  body {
+    margin-left: initial;
+    width: initial;
+  }
+
+  p {
+    text-indent: 25px;
+    text-align: justify;
+    font-size: .9em;
   }
 
   .cover .spacing {
     height: 700px;
+    display: block;
+    padding-top: initial;
+    margin-left: initial;
   }
 
   .cover .company {
@@ -234,25 +336,9 @@ div.divFooter, div.divHeader {
     margin-top: 2cm;
   }
 
-  .sumpage h3, .assessments h3, .closing-page h3 {
-    display: inline-block;
-    padding-bottom: 10px;
-    position: relative;  
-    margin-bottom: 1em;
-  }
-
-  .sumpage h3:before, .assessments h3:before, .closing-page h3:before {
-    content: "";
-    position: absolute;
-    width: 5em;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    border-bottom: 1px solid #06CE59;
-  }
-
   .sumpage .downarrow {
     height: 8px;
+    display: inline-block;
   }  
 
   .scorecard {
@@ -268,63 +354,6 @@ div.divFooter, div.divHeader {
   .closing-page {
     page-break-before: always;
     margin: .8cm 1.5cm .8cm 1.5cm;
-  }
-
-  .closing-page .logo {
-    width: 100%;
-    background-color: white;
-    height: 150px;
-    text-align: center;
-    margin-left: -.5cm;
-    margin-right: -.5cm;
-  }
-
-  .closing-page .logo img {
-    height: 90px;
-  }
-
-  .closing-page p {
-    text-indent: 0;
-    font-weight: lighter;
-    font-weight: 1em;
-  }
-
-  .contact {
-    height: 200px;
-    text-align: center;
-  }
-
-  .contact-info {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    position: relative;
-  }
-
-  .contact-info h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: lighter;
-    margin-left: 1em;
-    white-space: pre;
-  }
-
-  .contact-info h4:first-child {
-    margin-top: 2em;
-  }
-
-  .contact img {
-    height: 120px;
-  }
-
-  .contact-info:before {
-    content: '';
-    position: absolute;
-    height: 105%;
-    top: 40%;
-    left: 0;
-    width: 2px;
-    border-left: 1px solid #06CE59;
   }
 
   div.divFooter {
